@@ -32,6 +32,7 @@ public class TokenService {
                     .verify(token)
                     .getSubject();
         } catch (JWTVerificationException exception) {
+            System.out.println(">>> FALHA NA VALIDAÇÃO DO TOKEN: " + exception.getMessage());
             return null; // Token com verificação negada
         }
     }
