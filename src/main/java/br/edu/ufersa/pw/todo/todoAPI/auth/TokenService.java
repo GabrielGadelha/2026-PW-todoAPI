@@ -11,7 +11,7 @@ import java.time.temporal.ChronoUnit;
 
 @Service
 public class TokenService {
-    @Value("${api.security.token.secret}")
+    @Value("${api.security.token.secret:M6feG01PMct1KIXMIsv0ldzECNnB+J8AaDknDcGNpMk=}")
     private String secret;
     public String generateToken(Usuario usu) {
         Algorithm algorithm = Algorithm.HMAC256(secret);
